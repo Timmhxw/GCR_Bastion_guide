@@ -3,11 +3,11 @@
 ## 0 创建密钥并上传，选择自己的GCR机器，启动ssh服务
 > #### 0.1.1 打开windows powershell
 > #### 0.1.2 输入ssh
->#### 0.1.3 输入ssh-keygen -t ed25519，然后一直print enter键，如果有 overwrite（yes/no）的选项，直接选yes就行。
+>#### 0.1.3 输入ssh-keygen -t ed25519，然后一直print enter键，如果有 overwrite（yes/no）的选项，直接选yes就行。建议过程中不要修改生成密钥的位置。
 
 > #### 0.2.1 进入C:\Users\XXX\.ssh目录，会有一个id_ed25519的文件，用记事本打开，复制里面的内容。
 > #### 0.2.2 Log into the [GCR Public Key manager](https://aka.ms/gcrssh/)
-> #### 0.2.3 粘贴公钥，然后点击右边的Add Pubkey
+> #### 0.2.3 粘贴公钥，然后点击右边的Add Pubkey。注意粘贴公钥时，要粘贴包括fareast\alias@...之类的完整内容。
 > #### 0.2.4 在[GCR | T&R页面](http://gcr-reservations/default.aspx)里面申请服务器，记住所申请服务器friendly name后四位
 
 > #### 0.3 以管理员模式运行windows powershell，然后输入下面两行代码：
@@ -15,7 +15,7 @@
 > Set-Service -Name ssh-agent -StartupType Manual 
 > Start-Service ssh-agent
 > ````
-> 
+> #### 0.4 可以尝试使用[页面](https://dev.azure.com/msresearch/GCR/_wiki/wikis/GCR.wiki/6627/GCR-Bastion?anchor=using-the-web-portal)中Using The Web Portal部分的方法，用网页端连接自己申请的服务器，确保机子是可用的。
 
 ## 1 下载 AZ CLI
 
@@ -161,7 +161,7 @@ goto try_ssh
 >
 >- 检查-tunnel -num xxxx输入的后四位是否为本人申请的机子
 >
->- 检查当前是否为租借机子的时间段内
+>- 检查当前是否为租借机子的时间段内，推荐在收到activated邮件的半小时后再尝试连接。
 >
 > 如果以上情况都不是，报IT或者重启？
 
