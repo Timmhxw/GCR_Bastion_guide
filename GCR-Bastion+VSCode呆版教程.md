@@ -5,7 +5,7 @@
 > #### 0.1.2 输入ssh
 >#### 0.1.3 输入ssh-keygen -t ed25519，然后一直print enter键，如果有 overwrite（yes/no）的选项，直接选yes就行。建议过程中不要修改生成密钥的位置。
 
-> #### 0.2.1 进入C:\Users\XXX\.ssh目录，会有一个id_ed25519的文件，用记事本打开，复制里面的内容。
+> #### 0.2.1 进入C:\Users\XXX\.ssh目录，会有一个id_ed25519.pub的文件，用记事本打开，复制里面的内容。
 > #### 0.2.2 Log into the [GCR Public Key manager](https://aka.ms/gcrssh/)
 > #### 0.2.3 粘贴公钥，然后点击右边的Add Pubkey。注意粘贴公钥时，要粘贴包括fareast\alias@...之类的完整内容。
 > #### 0.2.4 在[GCR | T&R页面](http://gcr-reservations/default.aspx)里面申请服务器，记住所申请服务器friendly name后四位
@@ -163,14 +163,15 @@ goto try_ssh
 >
 >- 检查当前是否为租借机子的时间段内，推荐在收到activated邮件的半小时后再尝试连接。
 >
-> 如果以上情况都不是，报IT或者重启？
+> 如果以上情况都不是，报IT或者重启电脑试试？
 
 #### 3）global protect(笔者的版本号为6.0.0-262)连接VPN时，同时打开azure storage和tunnel，用azure storage下载大文件，会冲突导致蓝屏？
 > 某天蓝屏了三次发出的疑问
+> 有可能是 win 11开多用户的时候，开着global protect 容易造成两个用户的联网权限打架。建议登录公司用户时将个人用户退出登录/注销，避免权限或者内存问题。
 
 ---
 
-> 在Erhan的工作的基础上做一点小补充，如有纰漏请批评指正。
+> 在Erhan的工作的基础上做些补充，如有纰漏请批评指正。目前俩人都离职了，有兴趣的同事可以继续维护~
 > 
 > Teams: Xinwei Hong
 
