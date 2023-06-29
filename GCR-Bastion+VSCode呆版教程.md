@@ -3,7 +3,7 @@
 ## 0 创建密钥并上传，选择自己的GCR机器，启动ssh服务
 > #### 0.1.1 打开windows powershell
 > #### 0.1.2 输入ssh
->#### 0.1.3 输入ssh-keygen -t ed25519，然后一路回车，如果有 overwrite（yes/no）的选项，直接选yes就行。建议过程中不要修改生成密钥的位置。
+> #### 0.1.3 输入ssh-keygen -t ed25519，然后一路回车，如果有 overwrite（yes/no）的选项，直接选yes就行。建议过程中不要修改生成密钥的位置。
 
 > #### 0.2.1 进入C:\Users\XXX\.ssh目录，会有一个id_ed25519.pub的文件，用记事本打开，复制里面的内容。
 > #### 0.2.2 Log into the [GCR Public Key manager](https://aka.ms/gcrssh/)
